@@ -1,0 +1,32 @@
+.show-result {
+    top: 220px;
+    left: 50%;
+    font-size: 37px;
+    font-weight: bold;
+    width: fit-content;
+    transform: translate(-50%, 100vh);
+    transition: var(--sectionTransition);
+    word-spacing: -5px;
+}
+@media (min-width: 768px) {
+    .result.expand .show-result {
+        top: 120px;
+    }
+}
+.show-result.show {    
+    transform: translate(-50%, 0);
+}
+.show-result .btn {
+    background-color: #fff;
+    padding: 11px;
+    width: 100%;
+    min-width: 180px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: var(--darkText);
+    margin-top: -5px;
+}
+.show-result.lose .btn:hover,
+.show-result.lose .btn:focus {
+    color: hsl(349, 70%, 56%);
+}

@@ -1,0 +1,34 @@
+.items {
+    max-width: 270px;
+    height: 270px;
+    max-height: 240px;
+}
+@media (min-width: 576px) {
+    .items {
+        padding: 0 160px 280px;
+    }
+}
+@media (min-width: 768px) {
+    .items {
+        padding: 0 180px 310px;
+    }
+}
+.triangle {
+    --size: 170px;
+    position: absolute;
+    left: 47%;
+    top: 56%;
+    transform: translate(-50%, -50%);
+    width: var(--size);
+    height: var(--size);
+    background-size: cover;
+    background-image: url('../../assests/images/bg-triangle.svg');
+}
+@media (min-width: 768px) {
+    .triangle {
+        --size: 200px;
+    }
+}
+.items .item {
+    cursor: pointer;
+}

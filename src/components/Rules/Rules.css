@@ -1,0 +1,15 @@
+.rules-btn {
+    --space: calc(var(--padding) * 2.5);
+    bottom: var(--space);
+    right: var(--space);
+    width: 100px;
+    background-color: transparent;
+    color: var(--whiteColor);
+}
+@media (max-width: 767px) {
+    .rules-btn {
+        bottom: calc(var(--space) * 1.8);
+        right: 50%;
+        margin-right: -47.5px;
+    }
+}

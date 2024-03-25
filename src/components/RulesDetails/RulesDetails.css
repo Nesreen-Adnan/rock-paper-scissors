@@ -1,0 +1,39 @@
+.rules {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 20;
+    transition: calc(var(--transition) * 2);
+}
+.rules.show {
+    width: 100%;
+}
+.rules .container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    padding: var(--sectionPadding);
+    background-color: #fff;
+    border-radius: var(--largeBorderRadius);
+}
+.rules .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--sectionPadding);
+    color: var(--darkText);
+    padding: 0;
+}
+.rules h2 {
+    font-size: 23px;
+}
+.rules .close-btn {
+    cursor: pointer;
+}
+.rules .close-btn:hover {
+    filter: brightness(0) drop-shadow(-1px -1px 2px #999);
+}

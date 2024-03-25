@@ -1,0 +1,113 @@
+:root {
+  --smallFontSize: 11px;
+  --mediumFontSize: calc(var(--smallFontSize) * 1.5);
+  --largeFontSize: calc(var(--smallFontSize) * 2);
+  --xLargeFontSize: calc(var(--smallFontSize) * 3.5);
+  --borderRadius: 7px;
+  --largeBorderRadius: calc(var(--borderRadius) * 2);
+  --padding: 10px;
+  --sectionPadding: calc(var(--padding) * 3.5);
+  --darkText: hsl(229, 25%, 31%);
+  --grayColor: hsl(217, 16%, 45%);
+  --whiteColor: rgb(232, 232, 232);
+  --transition: .3s;
+  --sectionTransition: calc(var(--transition) * 4);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-image: linear-gradient(to top, hsl(237, 49%, 15%), hsl(214, 47%, 23%));
+  height: 100vh;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.bold {
+  font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.fs-sm {
+  font-size: var(--smallFontSize);
+}
+.fs-md {
+  font-size: var(--mediumFontSize);
+}
+.fs-lg {
+  font-size: var(--largeFontSize);
+}
+.fs-xl {
+  font-size: var(--xLargeFontSize);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  border-radius: 50%;
+}
+/* Positions */
+.right {
+  right: 0;
+  top: 0;
+}
+.left {
+  left: 0;
+  top: 0;
+}
+.bottom {
+  margin: 0 auto;
+  bottom: 0;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.transition {
+  transition: var(--transition);
+}
+.btn {
+  padding: var(--padding);
+  border: 1.5px solid var(--whiteColor);
+  border-radius: var(--borderRadius);
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* Animations */
+.minimize, 
+.btn {
+  opacity: .9;
+  transition: var(--transition);
+}
+.minimize:hover,
+.btn:hover {
+  opacity: 1;
+  transform: scale(.95, .95);
+}
+.minimize:hover *,
+.btn:hover * {
+  transform: scale(.98, .98);
+}
+.content {
+  position: relative;
+  margin: 50px auto;
+  transition: var(--sectionTransition);
+  transform: translateX(-100vw);
+}
+.content.show {
+  transform: translateX(0);
+}

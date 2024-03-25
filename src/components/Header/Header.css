@@ -1,0 +1,32 @@
+.App > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--padding) *1.5) calc(var(--padding) * 2);
+    border: 3px solid var(--grayColor);
+    border-radius: var(--largeBorderRadius);
+}
+.header .logo {
+    max-width: 120px;
+}
+@media (max-width: 767px) {
+    .App > .header {
+        padding: var(--padding);
+        border-radius: var(--borderRadius);
+    }
+    .header .logo {
+        max-width: 90px;
+        margin-left: var(--padding);
+    }
+}
+.header .score-box {
+    padding: var(--padding) calc(var(--padding) * 2.2);
+    background-color: var(--whiteColor);
+    color: hsl(229, 64%, 46%);
+    border-radius: var(--borderRadius);
+}
+.header .score-box .score {
+    margin: -4px 0 -6px;
+    display: block;
+    color: var(--darkText);
+}

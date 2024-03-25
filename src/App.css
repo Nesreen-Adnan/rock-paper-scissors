@@ -1,0 +1,9 @@
+.App {
+  padding: var(--sectionPadding);
+  color: #fff;
+  text-transform: uppercase;
+  max-width: 610px;
+  margin: 0 auto;
+  height: 100vh;
+}
+

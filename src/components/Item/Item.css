@@ -1,0 +1,87 @@
+.item {
+    --borderWidth: 13px;
+    --basicSize: 85px;
+    --size: calc(var(--basicSize) + (var(--borderWidth) * 2));
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    transition: var(--sectionTransition);
+}
+@media (min-width: 576px) {
+    .item {
+        --borderWidth: 15px;
+        --basicSize: 100px;
+    }
+}
+@media (min-width: 768px) {
+    .item {
+        --borderWidth: 18px;
+        --basicSize: 115px;
+    }
+}
+/* Colors */
+.item.blue {
+    --itemColor: linear-gradient(to bottom, hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+    --shadowColor: hsl(230, 65%, 46%);
+}
+.item.red {
+    --itemColor: linear-gradient(to bottom, hsl(349, 70%, 56%), hsl(349, 70%, 52%));
+    --shadowColor: hsl(346, 74%, 35%);
+}
+.item.yellow {
+    --itemColor: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(40, 84%, 49%));
+    --shadowColor: hsl(29, 77%, 44%);
+}
+.item .border {
+    width: 100%;
+    height: 100%;
+    background-image: var(--itemColor);
+    overflow: hidden;
+}
+.item .container::after, 
+.item .border::after {
+    --borderWidth: 5px;
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    border-width: var(--borderWidth);
+    border-style: solid;    
+    border-radius: 50%;
+}
+.item .border::after {
+    bottom: 0;
+    left: -11px;
+    width: 110%;
+    height: 110%;
+    border-color: transparent var(--shadowColor) var(--shadowColor);
+}
+@media (min-width: 768px) {
+    .item .container::after, 
+    .item .border::after {
+        --borderWidth: 7px;
+    }
+    .item .border::after {
+        left: -13px;
+    }
+}
+.item .container {
+    width: var(--basicSize);
+    height: var(--basicSize);
+    margin: var(--borderWidth);
+    background-color: var(--whiteColor);
+    overflow: hidden;
+    z-index: 10;
+}
+@media (max-width: 575px) {
+    .item .container img {
+        width: 38px;
+    }
+}
+.item .container::after {
+    --borderColor: hsl(226, 23%, 78%);
+    top: 0;
+    left: calc(var(--borderWidth) * -1.3);
+    width: 105%;
+    height: 105%;
+    border-color: var(--borderColor);
+}

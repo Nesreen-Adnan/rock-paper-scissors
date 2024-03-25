@@ -1,0 +1,19 @@
+.result-items {
+    min-height: 220px;
+}
+@media (min-width: 768px) {
+    .result.expand .result-items {
+        --halfSize: 95px;
+        animation: expand calc(var(--transition) * 1.5) linear 2.5s forwards;
+    }
+}
+@keyframes expand {
+    0% {
+        left: 0;
+        width: 100%;
+    }
+    100% {
+        left: calc(95px * -1);
+        width: calc(100% + 95px * 2);
+    }
+}
