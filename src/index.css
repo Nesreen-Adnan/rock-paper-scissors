@@ -21,7 +21,8 @@
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   background-image: linear-gradient(to top, hsl(237, 49%, 15%), hsl(214, 47%, 23%));
-  height: 100vh;
+  max-height: 100vh;
+  max-width: 100%;
   position: relative;
   text-transform: uppercase;
   overflow: hidden;
